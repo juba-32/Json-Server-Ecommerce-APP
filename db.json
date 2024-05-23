@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Product A",
+      "price": 66,
+      "category": "men",
+      "description": "This is Product A",
+      "imageUrl": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "2",
+      "name": "Product B",
+      "price": 75,
+      "category": "men",
+      "description": "This is Product B",
+      "imageUrl": "https://images.pexels.com/photos/1321943/pexels-photo-1321943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "3",
+      "name": "Product C",
+      "price": 33,
+      "category": "men",
+      "description": "This is Product C",
+      "imageUrl": "https://images.pexels.com/photos/878358/pexels-photo-878358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "4",
+      "name": "Product D",
+      "price": 80,
+      "category": "men",
+      "description": "This is Product D",
+      "imageUrl": "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "5",
+      "name": "Product E",
+      "price": 66,
+      "category": "men",
+      "description": "This is Product E",
+      "imageUrl": "https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "6",
+      "name": "Product F",
+      "price": 28,
+      "category": "women",
+      "description": "This is Product F",
+      "imageUrl": "https://images.pexels.com/photos/1839904/pexels-photo-1839904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "7",
+      "name": "Product G",
+      "price": 54,
+      "category": "women",
+      "description": "This is Product G",
+      "imageUrl": "https://images.pexels.com/photos/1877736/pexels-photo-1877736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "8",
+      "name": "Product H",
+      "price": 43,
+      "category": "women",
+      "description": "This is Product H",
+      "imageUrl": "https://images.pexels.com/photos/859199/pexels-photo-859199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },  {
+      "id": "9",
+      "name": "Product I",
+      "price": 23,
+      "category": "women",
+      "description": "This is Product I",
+      "imageUrl": "https://images.pexels.com/photos/2608344/pexels-photo-2608344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },  
+    {
+      "id": "10",
+      "name": "Product O",
+      "price": 82,
+      "category": "women",
+      "description": "This is Product O",
+      "imageUrl": "https://images.pexels.com/photos/2269880/pexels-photo-2269880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "11",
+      "name": "Product S",
+      "price": 66,
+      "category": "kids",
+      "description": "This is Product S",
+      "imageUrl": "https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "12",
+      "name": "Product K",
+      "price": 47,
+      "category": "kids",
+      "description": "This is Product K",
+      "imageUrl": "https://images.pexels.com/photos/1619772/pexels-photo-1619772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "13",
+      "name": "Product J",
+      "price": 70,
+      "category": "kids",
+      "description": "This is Product J",
+      "imageUrl": "https://images.pexels.com/photos/1620826/pexels-photo-1620826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },  
+    {
+      "id": "14",
+      "name": "Product Y",
+      "price": 60,
+      "category": "kids",
+      "description": "This is Product Y",
+      "imageUrl": "https://images.pexels.com/photos/2995309/pexels-photo-2995309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+
+  ]
+}

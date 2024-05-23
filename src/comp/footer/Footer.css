@@ -1,0 +1,249 @@
+ .footer {
+
+   display: grid;
+   align-items: first baseline;
+   place-items: center;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   color: #fff;
+   justify-items: center;
+   align-content: center;
+   margin-top: 200px;
+ }
+
+ .footer-sec {
+   padding: 20px;
+ }
+
+ ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+
+ }
+
+ ul li {
+   display: flex;
+   align-items: center;
+   gap: 2px;
+   cursor: pointer;
+   transition: all ease 0.5s;
+   padding: 5px;
+ }
+
+ ul h3 {
+   text-transform: capitalize;
+   font-size: 22px;
+   margin: 0;
+ }
+
+ ul li:hover {
+   gap: 5px;
+ }
+
+ ul li i {
+   font-size: 15px;
+ }
+
+ ul li p {
+   font-size: 15px;
+   text-transform: capitalize;
+ }
+
+
+
+
+ .footer .sochial-links {
+   display: grid;
+   align-items: last baseline;
+   gap: 20px;
+ }
+
+ .footer .sochial-links i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5px;
+   width: 25px;
+   height: 25px;
+   font-weight: bold;
+   border-radius: 50px;
+   color: #ff3c5f;
+   background: #fff;
+ }
+
+ .footer .sochial-links i:hover {
+   background: #ff3c5f;
+   color: #cbcfd1;
+ }
+
+ .copyright {
+   height: 50px;
+   width: 100%;
+   margin-top: 50px;
+   color: #ff3c5f;
+   background: transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-transform: capitalize;
+ }
+
+
+
+
+
+
+
+
+ @media only screen and (min-width:992px) and (max-width:1199px) {
+
+   /* CSS RULES FOR LAPTOPS */
+   .footer {
+
+     display: grid;
+     align-items: first baseline;
+     place-items: center;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 20px;
+     color: #fff;
+     justify-items: center;
+     align-content: center;
+   }
+
+
+   .footer .logo img {
+     width: 90px;
+     height: 90px;
+   }
+
+   ul h3 {
+     font-size: 20px;
+   }
+
+
+   ul li i {
+     font-size: 12px;
+   }
+
+   ul li p {
+     font-size: 12px;
+   }
+
+
+ }
+
+
+ @media only screen and (min-width:768px) and (max-width:991px) {
+
+   /* CSS RULES FOR TABLETS */
+   .footer {
+     display: grid;
+     align-items: first baseline;
+     place-items: center;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 20px;
+     color: #fff;
+     justify-items: center;
+     align-content: center;
+   }
+
+
+   .footer .logo img {
+     width: 80px;
+     height: 80px;
+   }
+
+   ul h3 {
+     text-transform: capitalize;
+     font-size: 18px;
+   }
+
+   ul li i {
+     font-size: 10px;
+   }
+
+   ul li p {
+     font-size: 11px;
+     text-transform: capitalize;
+   }
+
+   .footer .sochial-links {
+     display: grid;
+     align-items: last baseline;
+     gap: 10px;
+   }
+
+   .footer .sochial-links i {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 5px;
+     width: 22px;
+     height: 22px;
+     font-weight: bold;
+     border-radius: 50px;
+     color: #ff3c5f;
+     background: #fff;
+   }
+
+
+ }
+
+ @media only screen and (max-width:767px) {
+
+   /* CSS RULES FOR mobile device */
+   .footer {
+     display: grid;
+     align-items: first baseline;
+     place-items: center;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+     color: #fff;
+     justify-items: center;
+     align-content: center;
+   }
+
+
+
+   .footer .logo img {
+     width: 60px;
+     height: 60px;
+   }
+
+   ul h3 {
+     text-transform: capitalize;
+     font-size: 15px;
+   }
+
+   ul li i {
+     font-size: 10px;
+   }
+
+   ul li p {
+     font-size: 10px;
+     text-transform: capitalize;
+   }
+
+   .footer .sochial-links {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+   }
+
+   .footer .sochial-links i {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 5px;
+     width: 15px;
+     height: 15px;
+     font-weight: bold;
+     border-radius: 50px;
+     color: #ff3c5f;
+     background: #fff;
+   }
+
+
+
+ }

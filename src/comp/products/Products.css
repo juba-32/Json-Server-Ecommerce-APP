@@ -1,0 +1,269 @@
+.big-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid #fff;
+}
+
+.div {
+  border: 1px solid #fff;
+  flex: 25%;
+  width: 300px;
+  height: 300px;
+  background: #000;
+}
+
+.title {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  border-bottom: 3px solid #ff3c5f;
+  border-radius: 30px;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.search {
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 100px;
+  background: #fff;
+}
+
+.product-container {
+  width: 100%;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+  place-items: center;
+  margin: 50px auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 23rem;
+  height: 26rem;
+  border-radius: 10px;
+  position: relative;
+  /* -webkit-box-shadow: 9px 5px 32px 6px rgba(31, 65, 187, 0.88);
+  -moz-box-shadow: 9px 5px 32px 6px rgba(31, 65, 187, 0.88);
+  box-shadow: 0px 0px 12px 6px rgba(31, 65, 187, 0.88); */
+}
+
+.card img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+}
+
+
+
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  position: absolute;
+  inset: auto auto 35px 270px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff3c5f;
+
+  font-size: 20px;
+}
+
+.card h2 {
+  position: absolute;
+  inset: auto auto 35px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #fff;
+
+}
+
+.card p,
+.card button {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+  color: gray;
+  font-weight: bolder;
+}
+
+.card p {
+  inset: auto auto 80px 30px;
+  font-size: 12px;
+}
+
+.card button {
+  width: auto;
+  border-radius: 5px;
+  inset: auto auto 35px 30px;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px 25px;
+  border: 1px solid #464444;
+}
+.card button:hover{
+  background: #000
+  
+}
+.card:hover h2 {
+  inset: auto auto 220px 30px;
+  transition: inset 0.3s ease-out;
+}
+
+.card:hover p,
+.card:hover button {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+
+.card:hover img {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) and (max-width:2000px) {
+  .product-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+    place-items: center;
+    justify-items: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 25rem;
+    height: 25rem;
+    box-sizing: border-box;
+  }
+
+  .price {
+    inset: auto auto 30px 290px;
+    box-sizing: border-box;
+  }
+
+  .card h2 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+  .product-container {
+    width: 100%;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+    place-items: center;
+    justify-items: center;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 15rem;
+    height: 20rem;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .price {
+    inset: auto auto 30px 190px;
+  }
+
+  .card h2 {
+    font-size: 15px;
+  }
+
+
+
+}
+
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .card {
+    width: 15rem;
+    height: 19rem;
+  }
+
+  .price {
+    inset: auto auto 30px 190px;
+  }
+}
+
+@media only screen and (max-width:767px) and (min-width: 610px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .card {
+    width: 15rem;
+    height: 19rem;
+  }
+
+  .price {
+    inset: auto auto 30px 190px;
+  }
+}
+
+@media only screen and (max-width:609px) and (min-width: 290px) {
+  .product-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .card {
+    width: 15rem;
+    height: 19rem;
+  }
+
+  .price {
+    inset: auto auto 30px 190px;
+  }
+}
