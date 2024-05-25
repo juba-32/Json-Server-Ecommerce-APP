@@ -19,7 +19,7 @@ const Products = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("http://localhost:8000/products");
+      const response = await fetch("https://json-server-iota-orpin.vercel.app/");
       const products = await response.json();
       setData(products);
     })();
