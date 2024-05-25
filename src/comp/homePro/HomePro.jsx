@@ -10,7 +10,7 @@ export default function HomePro() {
   const [data, setData] = useState([]);
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://json-server-iota-orpin.vercel.app/");
+      const response = await fetch("https://json-server-iota-orpin.vercel.app/products");
       const products = await response.json();
       console.log(products);
       setData(products);
