@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { addToCart } from "../redux/createSlice";
 import { useDispatch } from "react-redux";
 import { MdShoppingCart } from "react-icons/md";
+import { Button } from "@mui/material";
 
 export default function HomePro() {
   const dispatch = useDispatch();
@@ -29,16 +30,16 @@ export default function HomePro() {
                 <span className="price">${product.price}</span>
               </div>
               <p>{product.description}</p>
-              <button
-                className="btn"
-                onClick={() => {
-                  dispatch(addToCart(product));
-                }}
-                variant="contained"
-                endIcon={<MdShoppingCart />}
-              >
-                Add 
-              </button>
+              <Button
+                  className="btn"
+                  onClick={() => {
+                    dispatch(addToCart(product));
+                  }}
+                  variant="contained"
+                  endIcon={<MdShoppingCart />}
+                >
+                  Add 
+                </Button>
             </div>
           </div>
         ))}
