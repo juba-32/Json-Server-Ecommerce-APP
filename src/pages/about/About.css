@@ -1,45 +1,63 @@
-h1{
+h1 {
   text-align: center;
   color: #fff;
   margin: 100px 0;
 }
-span{
+
+span {
   color: #ff3c5f;
   text-transform: capitalize;
 }
-.about-container{
+
+.about-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
   place-items: center;
+  animation: fadeInDown 1s ease forwards;
+
 }
 
-.about-inf{
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translatey(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+.about-inf {
   width: auto;
   max-width: 500px;
   height: auto;
   padding: 20px;
 }
 
-.about-inf h2{
+.about-inf h2 {
   color: #ff3c5f;
   text-transform: capitalize;
 }
-.about-inf p{
+
+.about-inf p {
   color: #fff;
   width: auto;
   height: auto;
   font-size: 18px;
   line-height: 30px;
 }
-.about-img{
+
+.about-img {
   width: auto;
   height: auto;
   padding: 20px;
 }
 
-.about-img img{
+.about-img img {
   width: auto;
   height: auto;
 }
@@ -48,12 +66,13 @@ span{
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .about-img{
+
+  .about-img {
     width: auto;
     height: auto;
   }
 
-  .about-inf{
+  .about-inf {
     width: auto;
     height: auto;
     min-width: 200px;
@@ -61,17 +80,18 @@ span{
   }
 }
 
-@media only screen and (max-width:550px) and (min-width:300px){
-  .about-img{
+@media only screen and (max-width:550px) and (min-width:300px) {
+  .about-img {
     width: 350px;
     height: auto;
   }
-  .about-img img{
+
+  .about-img img {
     width: 320px;
     height: auto;
   }
 
-  .about-inf{
+  .about-inf {
     width: 350px;
     height: auto;
     padding: 20px;

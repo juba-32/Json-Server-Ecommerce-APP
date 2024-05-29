@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./HomePro.css";
 import { useState, useEffect } from "react";
 import { addToCart } from "../redux/createSlice";
@@ -11,7 +11,9 @@ export default function HomePro() {
   const [data, setData] = useState([]);
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://json-server-iota-orpin.vercel.app/products");
+      const response = await fetch(
+        "https://json-server-iota-orpin.vercel.app/products"
+      );
       const products = await response.json();
       console.log(products);
       setData(products);
@@ -29,17 +31,8 @@ export default function HomePro() {
                 <h2>{product.name}</h2>
                 <span className="price">${product.price}</span>
               </div>
-              <p>{product.description}</p>
-              <Button
-                  className="btn"
-                  onClick={() => {
-                    dispatch(addToCart(product));
-                  }}
-                  variant="contained"
-                  endIcon={<MdShoppingCart />}
-                >
-                  Add 
-                </Button>
+              <Link to={`/products/${product.id}`}>Buy Now</Link>
+
             </div>
           </div>
         ))}

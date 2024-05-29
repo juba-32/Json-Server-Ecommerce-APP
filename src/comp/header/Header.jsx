@@ -3,20 +3,9 @@ import { MdShoppingCart } from "react-icons/md";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useState } from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import HeadLees from "../headlees/HeadLees";
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   const totalAmount = useSelector((state) => state.cart.totalAmount);
   return (
     <>
@@ -28,16 +17,16 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/home">Home</Link>
+                <Link className="nav-links" to="/home">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link className="nav-links" to="/about">About</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link className="nav-links" to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/products">Products</Link>
+                <Link className="nav-links" to="/products">Products</Link>
               </li>
             </ul>
           </nav>
@@ -45,7 +34,12 @@ const Header = () => {
             <MdShoppingCart />({totalAmount})
           </Link>
 
-          <div className="menu-toggle">
+          {/* <div className="menu-toggle">
+            
+
+
+
+            
             <Button
               id="basic-button"
               aria-controls={open ? "basic-menu" : undefined}
@@ -77,8 +71,12 @@ const Header = () => {
                 <Link className="url" to="/products">Products</Link>
               </MenuItem>
             </Menu>
-          </div>
+          </div> */}
+          <div className="sm-device">
+          <HeadLees />
         </div>
+        </div>
+        
       </div>
     </>
   );

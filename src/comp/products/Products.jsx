@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/createSlice";
 import { Button } from "@mui/material";
 import { MdShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -19,7 +20,9 @@ const Products = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://json-server-iota-orpin.vercel.app/products");
+      const response = await fetch(
+        "https://json-server-iota-orpin.vercel.app/products"
+      );
       const products = await response.json();
       setData(products);
     })();
@@ -98,17 +101,8 @@ const Products = () => {
                   <h2>{product.name}</h2>
                   <span className="price">${product.price}</span>
                 </div>
-                <p>{product.description}</p>
-                <Button
-                  className="btn"
-                  onClick={() => {
-                    dispatch(addToCart(product));
-                  }}
-                  variant="contained"
-                  endIcon={<MdShoppingCart />}
-                >
-                  Add 
-                </Button>
+
+                <Link to={`/products/${product.id}`}>Buy Now</Link>
               </div>
             </div>
           );

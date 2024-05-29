@@ -18,7 +18,7 @@
   font-size: 6rem;
   color: #fff;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 10px;
   text-transform: capitalize;
 }
 
@@ -43,11 +43,8 @@
   font-size: 20px;
   cursor: pointer;
   transition: all 0.8s ease;
-  color: #fff;
   background: #ff3c5f;
   border: none;
-  margin-bottom: 30px;
-  color: #fff;
   text-decoration: none;
 }
 
@@ -129,7 +126,7 @@
     height: auto;
   }
   .hero-title h1{
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .hero-img {
     width: auto;

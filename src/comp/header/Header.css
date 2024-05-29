@@ -29,7 +29,7 @@ nav ul {
 
 
 
-nav ul li a {
+nav ul a {
   text-decoration: none;
   color: #ff3c5f;
   padding: 5px 10px;
@@ -52,7 +52,7 @@ nav ul li a:hover {
 }
 
 
-.menu-toggle {
+.sm-device {
   display: none;
 }
 
@@ -62,15 +62,13 @@ nav ul li a:hover {
     justify-content: space-between;
   }
 
-  .cart {
-    display: none;
-  }
 
   nav {
     display: none;
   }
 
-  .menu-toggle {
+  .sm-device {
+    color: #fff;
     display: block;
     border: 1px solid #fff;
   }

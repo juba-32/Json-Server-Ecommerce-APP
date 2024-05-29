@@ -34,13 +34,12 @@
 
 .contact-option {
   width: 15rem;
-  background: var(--color-bg-variant);
   padding: 1.2rem;
   border-radius: 1.2rem;
   border: 1px solid transparent;
   transition: var(--transition);
   text-align: center;
-  
+  font-weight: 600;
 }
 .contact-option:hover{
   border: 1px solid #ff3c5f;
