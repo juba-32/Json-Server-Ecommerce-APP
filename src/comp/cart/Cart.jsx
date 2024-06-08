@@ -6,11 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import img from "../../assets/about.jpeg";
 
 export default function Cart() {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
-
+console.log(totalAmount)
   const dispatch = useDispatch();
 
   const cartProducts = useSelector((state) => state.cart.cart);
@@ -19,8 +18,8 @@ export default function Cart() {
   const items = useSelector(Data);
 
   let total = 0;
-  items.cart.forEach((proo) => {
-    total += proo.totalPrice;
+  items.cart.forEach((pro) => {
+    total += pro.totalPrice;
     console.log(total);
   });
 
@@ -38,20 +37,26 @@ export default function Cart() {
             return (
               <div className="cart-container">
                 <div className="cart-product">
-                  <img src={pro.imageUrl} alt="ssssssss" />
+                  <div className="cart-image">
+                    <img src={pro.imageUrl} alt="ssssssss" />
+                  </div>
                   <div className="product-info">
                     <p>{pro.name}</p>
                     <p>${pro.price}</p>
                     <p className="quantity">
-                      <button
+                      <button className="decrement-btn"
                         onClick={() => {
-                          dispatch(decrement(pro.id));
+                          if(pro.quantity >1){
+                            dispatch(decrement(pro.id));
+                          }else{
+                            dispatch(removeFromCart(pro.id));
+                          }
                         }}
                       >
                         -
                       </button>
                       <span> Quantity ( {pro.quantity} )</span>
-                      <button
+                      <button className="increment-btn"
                         onClick={() => {
                           dispatch(increment(pro.id));
                         }}
@@ -61,7 +66,7 @@ export default function Cart() {
                     </p>
 
                     <Button
-                      className="btn"
+                      className="btn1"
                       onClick={() => {
                         dispatch(removeFromCart(pro.id));
                       }}

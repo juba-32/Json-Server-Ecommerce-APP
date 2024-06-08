@@ -1,5 +1,5 @@
 import "./HeadLees.css";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import Logo from "../../assets/logo.png";
@@ -7,13 +7,14 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import { Link } from "react-router-dom";
+import { MdShoppingCart } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 export default function HeadlessDemo() {
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+
   const [visible, setVisible] = useState(false);
-  const btnRef1 = useRef(null);
-  const btnRef2 = useRef(null);
-  const btnRef3 = useRef(null);
-  const btnRef4 = useRef(null);
+  console.log(totalAmount);
 
   return (
     <div className="cards flex justify-content-center">
@@ -28,7 +29,7 @@ export default function HeadlessDemo() {
         visible={visible}
         onHide={() => setVisible(false)}
         content={({ closeIconRef, hide }) => (
-          <div className="min-h-screen flex relative lg:static surface-ground">
+          <div className="color min-h-screen flex relative lg:static surface-ground">
             <div
               id="app-sidebar-2"
               className="surface-section h-screen block flex-shrink-0 absolute lg:static left-0 top-0 z-1 border-right-1 surface-border select-none"
@@ -45,7 +46,7 @@ export default function HeadlessDemo() {
                       ref={closeIconRef}
                       onClick={(e) => hide(e)}
                       icon="pi pi-times"
-                      rounded
+                      // rounded
                       outlined
                       className="h-2rem w-2rem"
                     ></Button>
@@ -65,6 +66,16 @@ export default function HeadlessDemo() {
                     </li>
                     <li>
                       <Link to="/products">Products</Link>
+                    </li>
+                    <li>
+                      <Link className="register-btn" to="/register">
+                        Register
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/cart" className="cart">
+                        <MdShoppingCart /> <span>{totalAmount}</span>
+                      </Link>
                     </li>
                   </ul>
                 </div>

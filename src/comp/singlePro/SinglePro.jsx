@@ -7,16 +7,9 @@ import { MdShoppingCart } from "react-icons/md";
 const SinglePro = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
-  const quantity = useSelector((state) => state.cart.totalAmount);
 
   let [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
-  //  const addProduct = (product) => {
-  // console.log(product);
-  //  dispatch(addToCart(product)  );
-  //  const updatedQuantity = quantity + 1;
-  //  dispatch(handleQuantity(updatedQuantity));
-  //  };
 
   useEffect(() => {
     const getProduct = async () => {

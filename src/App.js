@@ -5,6 +5,7 @@ import Contact from "./pages/contact/Contact";
 import Products from "./pages/products/Products";
 import Cart from "./comp/cart/Cart";
 import SinglePro from './comp/singlePro/SinglePro';
+import Register from "./pages/register/Register";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<SinglePro />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );

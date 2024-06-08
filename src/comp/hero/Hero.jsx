@@ -7,7 +7,8 @@ const Hero = () => {
     <div>
       <div className="hero-container">
         <div className="hero-title">
-          <h1>always chose <br />yourself</h1>
+          <h1>alexander</h1>
+          <h2>Online Clothing Store</h2>
           <button className='hero-btn'> <NavLink to="/about"> more about us</NavLink></button>
         </div>
         <div className="hero-img">

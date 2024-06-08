@@ -5,18 +5,20 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/createSlice";
-import { Button } from "@mui/material";
-import { MdShoppingCart } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { FaShoppingCart, FaHeart, FaRegHeart } from "react-icons/fa";
+import { addToCart , setSelectedCategory} from "../redux/createSlice";
 
 const Products = () => {
   const [data, setData] = useState([]);
-  const [category, setCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [isFavorite, setIsFavorite] = useState(false);
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
   const dispatch = useDispatch();
+  const selectedCategory = useSelector((state) => state.cart.selectedCategory);
 
   useEffect(() => {
     (async () => {
@@ -28,8 +30,8 @@ const Products = () => {
     })();
   }, []);
 
-  const filteredProducts = () => {
-    if (category === "") {
+   const filteredProducts = () => {
+    if (selectedCategory === "") {
       return data; // Return all products if no category is specified
     } else {
       return data
@@ -37,13 +39,14 @@ const Products = () => {
           return product.name.toLowerCase().includes(searchQuery.toLowerCase());
         })
         .filter((product) => {
-          return product.category === category;
+          return product.category === selectedCategory;
         });
     }
   };
 
   const handleChange = (event) => {
-    setCategory(event.target.value);
+    dispatch(setSelectedCategory(event.target.value))
+    // setCategory(event.target.value);
   };
 
   return (
@@ -68,21 +71,21 @@ const Products = () => {
           name="row-radio-buttons-group"
         >
           <FormControlLabel
-            checked={category === "men"}
+            checked={selectedCategory === "men"}
             onChange={handleChange}
             value="men"
             control={<Radio sx={{ color: "#fff" }} />}
             label="Men"
           />
           <FormControlLabel
-            checked={category === "women"}
+            checked={selectedCategory === "women"}
             onChange={handleChange}
             value="women"
             control={<Radio sx={{ color: "#fff" }} />}
             label="women"
           />
           <FormControlLabel
-            checked={category === "kids"}
+            checked={selectedCategory === "kids"}
             onChange={handleChange}
             value="kids"
             control={<Radio sx={{ color: "#fff" }} />}
@@ -94,15 +97,34 @@ const Products = () => {
       <div className="product-container">
         {filteredProducts().map((product) => {
           return (
-            <div key={product.id} className="card">
-              <img src={product.imageUrl} alt={product.name} />
-              <div className="card-content">
-                <div className="card-info">
-                  <h2>{product.name}</h2>
-                  <span className="price">${product.price}</span>
+            <div className="product-card">
+              <div className="product-image">
+                <Link to={`/products/${product.id}`}>
+                  <img src={product.imageUrl} alt={product.name} />
+                </Link>
+                <div className="icons">
+                  <FaShoppingCart
+                    onClick={() => {
+                      dispatch(addToCart(product));
+                    }}
+                    className="icon cart-icon"
+                  />
+                  {isFavorite ? (
+                    <FaHeart
+                      className="icon favorite-icon"
+                      onClick={toggleFavorite}
+                    />
+                  ) : (
+                    <FaRegHeart
+                      className="icon favorite-icon"
+                      onClick={toggleFavorite}
+                    />
+                  )}
                 </div>
-
-                <Link to={`/products/${product.id}`}>Buy Now</Link>
+              </div>
+              <div className="product-details">
+                <h2>{product.name}</h2>
+                <p className="price">${product.price}</p>
               </div>
             </div>
           );

@@ -15,11 +15,23 @@
 }
 
 .hero-title h1 {
-  font-size: 6rem;
-  color: #fff;
+  letter-spacing: 3px;
+  font-size: 5rem;
+  color: #ff3c5f;
   text-align: center;
   margin-bottom: 10px;
   text-transform: capitalize;
+}
+.hero-title h2{
+  color: #fff;
+  font-size: 3rem;
+}
+
+.hero-title button{
+  font-size: 1rem;
+  padding: 5px 15px;
+  background: transparent;
+  border: 1px solid #ff3c5f;
 }
 
 @keyframes fadeInDown {
@@ -74,6 +86,10 @@
     height: auto;
   }
 
+  .hero-title h2{
+    font-size: 2.5rem;
+  }
+
   .hero-img {
     width: auto;
     height: auto;
@@ -89,6 +105,10 @@
   }
   .hero-title h1{
     font-size: 5rem;
+  }
+
+  .hero-title h2{
+    font-size: 1.9rem;
   }
   .hero-img {
     width: auto;
@@ -128,6 +148,11 @@
   .hero-title h1{
     font-size: 3rem;
   }
+
+  .hero-title h2{
+    font-size: 2rem;
+  }
+
   .hero-img {
     width: auto;
     height: auto;

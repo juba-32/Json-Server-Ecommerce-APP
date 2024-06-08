@@ -4,6 +4,7 @@ const initialState = {
   cart: [],
   totalAmount: 0,
   totalPrice: 0,
+  selectedCategory: "",
 };
 
 const cartSlice = createSlice({
@@ -11,11 +12,14 @@ const cartSlice = createSlice({
   initialState,
 
   reducers: {
+    setSelectedCategory: (state, action) =>{
+      state.selectedCategory = action.payload
+    },
     addToCart: (state, action) => {
       const newItem = action.payload;
       const productInCart = state.cart.find((pro) => pro.id === newItem.id);
       if (productInCart) {
-        productInCart.totalAmount += 1;
+        productInCart.quantity += 1;
         productInCart.totalPrice += newItem.price;
       } else {
         state.cart.push({
@@ -42,18 +46,14 @@ const cartSlice = createSlice({
     },
 
     decrement: (state, action) => {
-      const item = state.cart.find((pro) => pro.id === action.payload);
-      if (item.quantity > 1) {
+      const item = state.cart.find((pro) => pro.id === action.payload); 
         item.quantity--;
         item.totalPrice -= item.price;
-      } else{
-        removeFromCart(item.id)
-      }
     },
   },
 });
 
-export const { addToCart, removeFromCart, increment, decrement } =
+export const { addToCart, removeFromCart, increment, decrement,setSelectedCategory } =
   cartSlice.actions;
 
 export default cartSlice.reducer;
