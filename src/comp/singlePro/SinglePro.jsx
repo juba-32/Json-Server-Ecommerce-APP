@@ -1,13 +1,15 @@
 import "./SinglePro.css";
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/createSlice";
 import { MdShoppingCart } from "react-icons/md";
+import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const SinglePro = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState([]);
-
   let [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
@@ -30,6 +32,9 @@ const SinglePro = () => {
     return (
       <>
         <div className="singlePro-container">
+          <i className="back-icon" onClick={() => {
+            navigate("/home");
+          }}><FaArrowLeft /></i>
           <div className="pro-details">
             <div className="img">
               <img
@@ -61,7 +66,6 @@ const SinglePro = () => {
                 <MdShoppingCart />{" "}
               </i>
             </button>
-            <NavLink to="/cart">Go to Cart</NavLink>
           </div>
         </div>
       </>

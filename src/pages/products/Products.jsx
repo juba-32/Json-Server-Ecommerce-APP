@@ -5,9 +5,7 @@ import MyProducts from '../../comp/products/Products'
 export default function Products() {
   return (
     <div>
-      <Header />
       <MyProducts />
-      <Footer />
     </div>
   )
 }

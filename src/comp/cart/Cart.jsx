@@ -9,7 +9,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function Cart() {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
-console.log(totalAmount)
   const dispatch = useDispatch();
 
   const cartProducts = useSelector((state) => state.cart.cart);
@@ -20,7 +19,6 @@ console.log(totalAmount)
   let total = 0;
   items.cart.forEach((pro) => {
     total += pro.totalPrice;
-    console.log(total);
   });
 
   return (
@@ -28,7 +26,6 @@ console.log(totalAmount)
       <Helmet>
         <title>CART</title>
       </Helmet>
-      <Header />
       <h3>Shopping cart ({totalAmount}) Product</h3>
 
       <div>
@@ -46,9 +43,9 @@ console.log(totalAmount)
                     <p className="quantity">
                       <button className="decrement-btn"
                         onClick={() => {
-                          if(pro.quantity >1){
+                          if (pro.quantity > 1) {
                             dispatch(decrement(pro.id));
-                          }else{
+                          } else {
                             dispatch(removeFromCart(pro.id));
                           }
                         }}
@@ -89,17 +86,20 @@ console.log(totalAmount)
               <span>${total}</span>
             </div>
           </div>
-          <div className="discount">
-            <span>use discount code</span>
-            <div className="discount-code">
-              <input type="text" placeholder="your discount code" />
-              <button>apply</button>
-            </div>
-          </div>
+          {
+            cartProducts?.length ? (
+              <div className="discount">
+                <span>use discount code</span>
+                <div className="discount-code">
+                  <input type="text" placeholder="your discount code" />
+                  <button>apply</button>
+                </div>
+              </div>
+            ) : ''
+          }
         </div>
         <button className="btn">complete order</button>
       </div>
-      <Footer />
     </div>
   );
 }

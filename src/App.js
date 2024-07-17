@@ -6,9 +6,12 @@ import Products from "./pages/products/Products";
 import Cart from "./comp/cart/Cart";
 import SinglePro from './comp/singlePro/SinglePro';
 import Register from "./pages/register/Register";
+import Footer from "./comp/footer/Footer";
+import Header from "./comp/header/Header";
 function App() {
   return (
     <>
+    <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -19,6 +22,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

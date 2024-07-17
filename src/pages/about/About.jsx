@@ -12,7 +12,6 @@ export default function About() {
       <Helmet>
         <title>ABOUT</title>
       </Helmet>
-      <Header />
       <h1>wellcome to <span>alexander</span> </h1>
       <div className="about-container">
         <div className="about-inf">
@@ -34,7 +33,6 @@ export default function About() {
           <img src={img} alt="" />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

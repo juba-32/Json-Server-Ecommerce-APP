@@ -11,14 +11,13 @@ export default function Contact() {
       <Helmet>
         <title>CONTACT</title>
       </Helmet>
-      <Header />
       <section id="contact">
         <h1>Get In Touch</h1>
 
         <div className="container contact-container">
           <div className="contact-options">
             <article className="contact-option">
-              <AiOutlineMail className="icons" />
+              <AiOutlineMail className="contact-icons" />
               <h4>Email</h4>
               <h5>bendarya58@gmail.com</h5>
               <a href="mailto:bendarya58@gmail.com" target="-blank">
@@ -27,7 +26,7 @@ export default function Contact() {
             </article>
 
             <article className="contact-option">
-              <BsMessenger className="icons" />
+              <BsMessenger className="contact-icons" />
               <h4>Messengar</h4>
               <h5>Ahmed Bendary</h5>
               <a href="https://m.me/bendary32" target="-blank">
@@ -36,7 +35,7 @@ export default function Contact() {
             </article>
 
             <article className="contact-option">
-              <AiOutlineWhatsApp className="icons" />
+              <AiOutlineWhatsApp className="contact-icons" />
               <h4>WhatsApp</h4>
               <h5>+01060394855</h5>
               <a
@@ -47,7 +46,7 @@ export default function Contact() {
               </a>
             </article>
           </div>
-          <form action="">
+          <form action="submit">
             <input
               type="text"
               name="name"
@@ -72,7 +71,6 @@ export default function Contact() {
           </form>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

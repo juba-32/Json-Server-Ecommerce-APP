@@ -46,7 +46,6 @@ const Products = () => {
 
   const handleChange = (event) => {
     dispatch(setSelectedCategory(event.target.value))
-    // setCategory(event.target.value);
   };
 
   return (
@@ -106,6 +105,7 @@ const Products = () => {
                   <FaShoppingCart
                     onClick={() => {
                       dispatch(addToCart(product));
+                      toggleFavorite()
                     }}
                     className="icon cart-icon"
                   />

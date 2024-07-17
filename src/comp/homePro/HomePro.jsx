@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./HomePro.css";
 import { useDispatch } from "react-redux";
 import { setSelectedCategory } from "../redux/createSlice";
@@ -35,7 +35,7 @@ export default function HomePro() {
 
   return (
     <div>
-      <div  className="pro-container">
+      <div className="pro-container">
         {array.map((product) => (
           <div
             key={product.id}
@@ -47,8 +47,9 @@ export default function HomePro() {
           </div>
         ))}
       </div>
-      <button className="hero-btn">
-        <NavLink to="/products">explore more</NavLink>
+      <button className="hero-btn" onClick={() => handleCategorySelection("")}
+      >
+        explore more
       </button>
     </div>
   );

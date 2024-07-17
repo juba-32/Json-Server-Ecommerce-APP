@@ -14,7 +14,6 @@ export default function HeadlessDemo() {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   const [visible, setVisible] = useState(false);
-  console.log(totalAmount);
 
   return (
     <div className="cards flex justify-content-center">
