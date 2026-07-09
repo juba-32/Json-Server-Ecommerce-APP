@@ -5,6 +5,7 @@ const initialState = {
   totalAmount: 0,
   totalPrice: 0,
   selectedCategory: "",
+  searchQuery: "",
 };
 
 const cartSlice = createSlice({
@@ -12,8 +13,8 @@ const cartSlice = createSlice({
   initialState,
 
   reducers: {
-    setSelectedCategory: (state, action) =>{
-      state.selectedCategory = action.payload
+    setSelectedCategory: (state, action) => {
+      state.selectedCategory = action.payload;
     },
     addToCart: (state, action) => {
       const newItem = action.payload;
@@ -33,7 +34,7 @@ const cartSlice = createSlice({
 
     removeFromCart: (state, action) => {
       const deleteProduct = state.cart.filter(
-        (pro) => pro.id !== action.payload
+        (pro) => pro.id !== action.payload,
       );
       state.cart = deleteProduct;
       state.totalAmount--;
@@ -46,14 +47,24 @@ const cartSlice = createSlice({
     },
 
     decrement: (state, action) => {
-      const item = state.cart.find((pro) => pro.id === action.payload); 
-        item.quantity--;
-        item.totalPrice -= item.price;
+      const item = state.cart.find((pro) => pro.id === action.payload);
+      item.quantity--;
+      item.totalPrice -= item.price;
+    },
+
+    searchByTitle: (state, action) => {
+      state.searchQuery = action.payload;
     },
   },
 });
 
-export const { addToCart, removeFromCart, increment, decrement,setSelectedCategory } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  increment,
+  decrement,
+  setSelectedCategory,
+  searchByTitle,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

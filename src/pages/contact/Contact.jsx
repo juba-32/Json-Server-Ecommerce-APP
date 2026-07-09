@@ -1,6 +1,4 @@
 import "./C.ontact.css";
-import Header from "../../comp/header/Header";
-import Footer from "../../comp/footer/Footer";
 import { Helmet } from "react-helmet-async";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsMessenger } from "react-icons/bs";

@@ -1,7 +1,9 @@
-import React from "react";
-import Hero from "../../comp/hero/Hero.jsx";
-import HomePro from "../../comp/homePro/HomePro.jsx";
+import Hero from "./hero/Hero.jsx";
+import HomePro from "./homePro/HomePro.jsx";
 import { Helmet } from "react-helmet-async";
+import Features from "./features/Features.jsx";
+import SeasonalOffer from "./seasonalOffer/SeasonalOffer.jsx";
+import FeaturedProducts from "./FeaturedProducts/FeaturedProducts.jsx";
 
 export default function Home() {
   return (
@@ -11,6 +13,9 @@ export default function Home() {
       </Helmet>
       <Hero />
       <HomePro />
+      <SeasonalOffer />
+      <FeaturedProducts />
+      <Features />
     </div>
   );
 }

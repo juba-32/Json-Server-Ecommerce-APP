@@ -1,6 +1,4 @@
 import  "./About.css";
-import Header from "../../comp/header/Header";
-import Footer from "../../comp/footer/Footer";
 import { Helmet } from "react-helmet-async";
 import img from '../../assets/about.jpeg';
 

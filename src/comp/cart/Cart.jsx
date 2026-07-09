@@ -1,7 +1,5 @@
 import "./Cart.css";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import { decrement, increment, removeFromCart } from "../redux/createSlice";
+import { decrement, increment, removeFromCart } from "../../redux/createSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@mui/material";

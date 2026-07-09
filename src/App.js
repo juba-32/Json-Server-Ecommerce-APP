@@ -4,14 +4,17 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Products from "./pages/products/Products";
 import Cart from "./comp/cart/Cart";
-import SinglePro from './comp/singlePro/SinglePro';
+import SinglePro from "./pages/products/singlePro/SinglePro";
 import Register from "./pages/register/Register";
 import Footer from "./comp/footer/Footer";
-import Header from "./comp/header/Header";
+import Navbar from "./comp/navbar/Navbar";
+import ScrollToTop from "./comp/ScrollToTop/ScrollToTop";
+
 function App() {
   return (
-    <>
-    <Header/>
+    <div className="App">
+      <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -22,8 +25,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-      <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
 

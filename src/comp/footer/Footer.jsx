@@ -4,7 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { TiSocialTwitter } from "react-icons/ti";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
-import img from "../../assets/logo.png";
+import img from "../../assets/logo.webp";
 const Footer = () => {
   return (
     <>
