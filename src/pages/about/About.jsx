@@ -1,36 +1,35 @@
-import  "./About.css";
-import { Helmet } from "react-helmet-async";
-import img from '../../assets/about.jpeg';
-
-
-
-export default function About() {
+import "./About.css";
+import Features from "./features/Features.jsx";
+import AboutImage from "../../assets/about.jpeg";
+const About = () => {
   return (
-    <div>
-      <Helmet>
-        <title>ABOUT</title>
-      </Helmet>
-      <h1>wellcome to <span>alexander</span> </h1>
-      <div className="about-container">
-        <div className="about-inf">
-          <h2>about us</h2>
+    <div className="about-container">
+      <section className="about-hero">
+        <h1>About Our Store</h1>
+        <p>Bringing you the best quality products with passion and dedication.</p>
+      </section>
+
+      <section className="about-content">
+        <div className="about-text">
+          <h2>Our Story</h2>
           <p>
-            At alexander
-            , we believe that shopping should be an enjoyable and
-            effortless experience. Founded in 1995, our mission is to bring
-            you the best products from around the world, right to your doorstep.
-            We pride ourselves on offering a diverse range of high-quality items
-            at unbeatable prices. alexander started
-            as a small idea with a big dream: to create an online marketplace
-            where customers can find everything they need in one place. Over the
-            years, we’ve grown from a humble startup into a leading e-commerce
-            platform, serving thousands of happy customers worldwide.
+            Founded in 2026, our store started with a simple idea: to make 
+            high-quality products accessible to everyone. We believe that 
+            shopping should be an experience, not just a transaction.
+          </p>
+          <p>
+            Our team works tirelessly to source the best items, ensuring 
+            that every product you receive meets our high standards of quality.
           </p>
         </div>
-        <div className="about-img">
-          <img src={img} alt="" />
+        <div className="about-image">
+          <img src={AboutImage} alt="About Us" />
         </div>
-      </div>
+      </section>
+
+      <Features />
     </div>
   );
-}
+};
+
+export default About;

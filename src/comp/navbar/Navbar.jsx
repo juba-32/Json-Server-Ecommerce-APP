@@ -13,7 +13,7 @@ import "./Navbar.css";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
-  const menuItems = ["Home", "Products", "About", "Contact", "Register"];
+  const menuItems = ["Products", "About", "Contact"];
 
   return (
     <header className="navbar">
@@ -26,7 +26,7 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <NavLink
               key={item}
-              to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
+              to={`/${item.toLowerCase() === "/" ? "" : item.toLowerCase()}`}
               className={({ isActive }) =>
                 isActive ? "nav-link active" : "nav-link"
               }
@@ -38,7 +38,7 @@ const Navbar = () => {
 
         <div className="nav-actions">
           <Link to="/register" className="btn-register">
-            Register
+            Sign Up
           </Link>
           <Link to="/cart" className="cart-icon">
             <MdShoppingCart size={24} />
@@ -47,6 +47,10 @@ const Navbar = () => {
         </div>
 
         <div className="sm-device">
+        <Link to="/cart" className="cart-icon">
+            <MdShoppingCart size={20} />
+            <span className="cart-badge">{totalAmount}</span>
+          </Link>
           <Button
             icon="pi pi-bars"
             onClick={() => setVisible(true)}
@@ -68,12 +72,15 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <NavLink
                 key={item}
-                to={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
+                to={`/${item.toLowerCase() === "/" ? "" : item.toLowerCase()}`}
                 onClick={() => setVisible(false)}
               >
                 {item}
               </NavLink>
             ))}
+            <NavLink to="/register" onClick={() => setVisible(false)}>
+              Sign Up
+            </NavLink>
           </nav>
         </div>
       </Sidebar>

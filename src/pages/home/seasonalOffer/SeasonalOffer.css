@@ -1,6 +1,7 @@
 .seasonal-offer {
-  width: 100%;
+  width: 87%;
   height: 60vh;
+  margin: 50px auto;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                     url('https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg');
   background-size: contain;
@@ -11,6 +12,7 @@
   justify-content: center;
   text-align: center;
   color: white;
+  border-radius: 10px;
 }
 
 .offer-content {

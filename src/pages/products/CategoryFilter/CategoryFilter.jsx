@@ -12,7 +12,7 @@ export default function CategoryFilter({ selectedCategory}) {
   };
   return (
     <div>
-        <FormControl sx={{ ml: "50px", color: "#fff" }}>
+        <FormControl sx={{ ml: "50px", color: "#000" }}>
         <RadioGroup
           row
           aria-labelledby="demo-row-radio-buttons-group-label"
@@ -22,28 +22,28 @@ export default function CategoryFilter({ selectedCategory}) {
             checked={selectedCategory === ""}
             onChange={handleChange}
             value=""
-            control={<Radio sx={{ color: "#fff" }} />}
+            control={<Radio sx={{ color: "#ff3c5f!important" }} />}
             label="All"
           />
           <FormControlLabel
             checked={selectedCategory === "men"}
             onChange={handleChange}
             value="men"
-            control={<Radio sx={{ color: "#fff" }} />}
+            control={<Radio sx={{ color: "#ff3c5f!important" }} />}
             label="Men"
           />
           <FormControlLabel
             checked={selectedCategory === "women"}
             onChange={handleChange}
             value="women"
-            control={<Radio sx={{ color: "#fff" }} />}
+            control={<Radio sx={{ color: "#ff3c5f!important" }} />}
             label="women"
           />
           <FormControlLabel
             checked={selectedCategory === "kids"}
             onChange={handleChange}
             value="kids"
-            control={<Radio sx={{ color: "#fff" }} />}
+            control={<Radio sx={{ color: "#ff3c5f!important" }} />}
             label="kids"
           />
         </RadioGroup>

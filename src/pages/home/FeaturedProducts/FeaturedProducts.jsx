@@ -22,6 +22,7 @@ const FeaturedProducts = () => {
     <div className="featured-section">
       <h2>Featured Products</h2>
       <Swiper
+      className="featured-swiper"
         modules={[Navigation]}
         navigation
         spaceBetween={20}
